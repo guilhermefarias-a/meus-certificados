@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Certificados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="container">
+            <h1>Meu Portfólio</h1>
+            <p>Certificados e qualificações profissionais</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="apresentacao">
+            <h2>Meus Certificados</h2>
+            <p>
+                Conheça meus cursos, capacitações e certificações.
+                Aqui você encontra minha trajetória de aprendizado.
+            </p>
+        </section>
+
+        <section class="filtros">
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar certificado..."
+            >
+
+            <select id="categoria">
+                <option value="todos">Todas as categorias</option>
+                <option value="Redes">Redes</option>
+                <option value="Infraestrutura">Infraestrutura</option>
+                <option value="Dados">Análise de Dados</option>
+                <option value="Desenvolvimento">Desenvolvimento</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </section>
+
+        <section id="galeria" class="galeria"></section>
+
+        <p id="mensagem" class="mensagem"></p>
+
+    </main>
+
+    <!-- Janela de visualização -->
+    <div id="modal" class="modal">
+        <button id="fechar" class="fechar" aria-label="Fechar">×</button>
+
+        <div class="modal-conteudo">
+            <h2 id="tituloModal"></h2>
+            <img id="imagemModal" src="" alt="Certificado ampliado">
+            <p id="detalhesModal"></p>
+            <a id="baixar" href="" download class="botao">
+                Baixar certificado
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Portfólio de certificados profissionais</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
