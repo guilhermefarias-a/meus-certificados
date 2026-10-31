@@ -1,72 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Certificados</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meus certificados</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+  <h1 id="titulo">Meus certificados</h1>
+  <button id="voltar" type="button" hidden>← Todos os certificados</button>
+</header>
+<main>
+  <div id="grade" class="grade"></div>
+  <p id="msg" class="msg"></p>
+</main>
 
-    <header class="topo">
-        <div class="container">
-            <h1>Meu Portfólio</h1>
-            <p>Certificados e qualificações profissionais</p>
-        </div>
-    </header>
+<div id="visor" hidden role="dialog" aria-modal="true" aria-label="Visualizar certificado">
+  <div class="barra">
+    <strong id="v-titulo"></strong>
+    <a id="v-baixar" download>Baixar</a>
+    <button id="v-fechar" type="button" aria-label="Fechar">✕</button>
+  </div>
+  <div class="palco">
+    <button id="v-ant" class="nav" type="button" aria-label="Anterior">‹</button>
+    <div id="v-doc" class="doc"></div>
+    <button id="v-prox" class="nav" type="button" aria-label="Próximo">›</button>
+  </div>
+</div>
 
-    <main class="container">
-
-        <section class="apresentacao">
-            <h2>Meus Certificados</h2>
-            <p>
-                Conheça meus cursos, capacitações e certificações.
-                Aqui você encontra minha trajetória de aprendizado.
-            </p>
-        </section>
-
-        <section class="filtros">
-            <input
-                type="text"
-                id="pesquisa"
-                placeholder="Pesquisar certificado..."
-            >
-
-            <select id="categoria">
-                <option value="todos">Todas as categorias</option>
-                <option value="Redes">Redes</option>
-                <option value="Infraestrutura">Infraestrutura</option>
-                <option value="Dados">Análise de Dados</option>
-                <option value="Desenvolvimento">Desenvolvimento</option>
-                <option value="Outros">Outros</option>
-            </select>
-        </section>
-
-        <section id="galeria" class="galeria"></section>
-
-        <p id="mensagem" class="mensagem"></p>
-
-    </main>
-
-    <!-- Janela de visualização -->
-    <div id="modal" class="modal">
-        <button id="fechar" class="fechar" aria-label="Fechar">×</button>
-
-        <div class="modal-conteudo">
-            <h2 id="tituloModal"></h2>
-            <img id="imagemModal" src="" alt="Certificado ampliado">
-            <p id="detalhesModal"></p>
-            <a id="baixar" href="" download class="botao">
-                Baixar certificado
-            </a>
-        </div>
-    </div>
-
-    <footer>
-        <p>Portfólio de certificados profissionais</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
